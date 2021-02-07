@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name="pydo.txt",
-      version="1.0",
+      version="1.1",
       description="A module to parse todo.txt tasks",
       author="Alvie Rahman",
       url="https://github.com/alvierahman90/pydo.txt",

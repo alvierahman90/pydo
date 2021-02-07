@@ -14,6 +14,8 @@ class Task:
         self.projects = []
         self.contexts = []
         self.specials = []
+        # can be used by external applications. is not included in the self.__str__() function
+        self.id = None
 
         arguments = text.split(' ')
         counter = 0
@@ -28,8 +30,7 @@ class Task:
             self.priority = self.priority.upper()
             counter += 1
 
-        # try to get completion date if done
-
+        # try to get completion date if task is marked as done
         if self.done:
             try:
                 self.completion_date = d.strptime(arguments[counter],
