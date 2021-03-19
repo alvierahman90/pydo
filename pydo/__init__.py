@@ -4,7 +4,7 @@ from datetime import datetime as d
 
 
 class Task:
-    def __init__(self, text):
+    def __init__(self, text, id=None):
         # defaults
         self.completion_date = None
         self.creation_date = None
@@ -15,7 +15,7 @@ class Task:
         self.contexts = []
         self.specials = []
         # can be used by external applications. is not included in the self.__str__() function
-        self.id = None
+        self.id = id
 
         arguments = text.split(' ')
         counter = 0
